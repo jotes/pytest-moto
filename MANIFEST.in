@@ -1,0 +1,4 @@
+include *.rst *.py
+recursive-include src/pytest-moto *.py
+recursive-include docs *
+prune docs/build
