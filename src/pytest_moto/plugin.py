@@ -13,7 +13,7 @@ CONNECTION_MAP = {
     'dynamodb2': 'boto.dynamodb2.layer1:DynamoDBConnection',
     'ec2': 'boto.ec2:EC2Connection',
     'elb': 'boto.ec2.elb:ELBConnection',
-    'emr': 'boto.emr.EmrConnection',
+    'emr': 'boto.emr:EmrConnection',
     'glacier': 'boto.glacier.layer1:Layer1',
     'iam': 'boto.iam.connection:IAMConnection',
     'kinesis': 'boto.kinesis.layer1:KinesisConnection',
@@ -79,7 +79,9 @@ def moto_fixture(service, host='127.0.0.1', port=7000, timeout=10,
 
 # Fixtures for every AWS service which can be mocked via moto
 moto_autoscaling = moto_fixture('autoscaling')
-moto_cloudformation = moto_fixture('cloudformation', port=7001)
+
+# Cloudformation isn't supported in standalone mode of moto
+# moto_cloudformation = moto_fixture('cloudformation', port=7001)
 moto_cloudwatch = moto_fixture('cloudwatch', port=7002)
 moto_dynamodb = moto_fixture('dynamodb', port=7003)
 moto_ec2 = moto_fixture('ec2', port=7004)
