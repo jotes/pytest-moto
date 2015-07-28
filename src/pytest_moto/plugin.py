@@ -77,10 +77,10 @@ def moto_fixture(service, host='127.0.0.1', port=7000, timeout=10,
     return moto_service
 
 
-# Fixtures for every AWS service which can be mocked via moto
+# Fixtures for every AWS service which can be mocked via moto.
 moto_autoscaling = moto_fixture('autoscaling')
 
-# TODO: Cloudformation isn't supported in standalone mode of moto
+# TODO: Cloudformation isn't supported in standalone mode of moto.
 # moto_cloudformation = moto_fixture('cloudformation', port=7001)
 moto_cloudwatch = moto_fixture('cloudwatch', port=7002)
 moto_dynamodb = moto_fixture('dynamodb', port=7003)
@@ -89,7 +89,7 @@ moto_elb = moto_fixture('elb', port=7005)
 moto_emr = moto_fixture('emr', port=7006)
 moto_glacier = moto_fixture('glacier', port=7007)
 
-# TODO: IAM isn't supported in standalone mode of moto
+# TODO: IAM isn't supported in standalone mode of moto.
 # moto_iam = moto_fixture('iam', port=7008)
 
 moto_kinesis = moto_fixture('kinesis', port=7009)
@@ -103,7 +103,8 @@ moto_redshift = moto_fixture('redshift', port=7012)
 
 moto_s3 = moto_fixture('s3', port=7014)
 moto_ses = moto_fixture('ses', port=7015)
-# TODO: SNS isn't supported in standalone mode of moto
+
+# TODO: SNS isn't supported in standalone mode of moto.
 # moto_sns = moto_fixture('sns', port=7016)
 
 moto_sqs = moto_fixture('sqs', port=7017)
