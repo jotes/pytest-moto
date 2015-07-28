@@ -21,10 +21,10 @@ CONNECTION_MAP = {
     'rds': 'boto.rds:RDSConnection',
     'redshift': 'boto.redshift.layer1:RedshiftConnection',
     'route53': 'boto.route53:Route53Connection',
-    's3': 'boto.s3:S3Connection',
+    's3': 'boto.s3.connection:S3Connection',
     'ses': 'boto.ses:SESConnection',
     'sns': 'boto.sns:SNSConnection',
-    'sqs': 'boto.sqs:SQSConnection',
+    'sqs': 'boto.sqs.connection:SQSConnection',
     'sts': 'boto.sts:STSConnection',
 }
 
@@ -80,7 +80,7 @@ def moto_fixture(service, host='127.0.0.1', port=7000, timeout=10,
 # Fixtures for every AWS service which can be mocked via moto
 moto_autoscaling = moto_fixture('autoscaling')
 
-# Cloudformation isn't supported in standalone mode of moto
+# TODO: Cloudformation isn't supported in standalone mode of moto
 # moto_cloudformation = moto_fixture('cloudformation', port=7001)
 moto_cloudwatch = moto_fixture('cloudwatch', port=7002)
 moto_dynamodb = moto_fixture('dynamodb', port=7003)
@@ -88,14 +88,23 @@ moto_ec2 = moto_fixture('ec2', port=7004)
 moto_elb = moto_fixture('elb', port=7005)
 moto_emr = moto_fixture('emr', port=7006)
 moto_glacier = moto_fixture('glacier', port=7007)
-moto_iam = moto_fixture('iam', port=7008)
+
+# TODO: IAM isn't supported in standalone mode of moto
+# moto_iam = moto_fixture('iam', port=7008)
+
 moto_kinesis = moto_fixture('kinesis', port=7009)
 moto_kms = moto_fixture('kms', port=7010)
 moto_rds = moto_fixture('rds', port=7011)
 moto_redshift = moto_fixture('redshift', port=7012)
-moto_route53 = moto_fixture('route53', port=7013)
+
+# TODO: Route53 can't use insecure connections
+# requires changes in boto.
+# moto_route53 = moto_fixture('route53', port=7013)
+
 moto_s3 = moto_fixture('s3', port=7014)
 moto_ses = moto_fixture('ses', port=7015)
-moto_sns = moto_fixture('sns', port=7016)
+# TODO: SNS isn't supported in standalone mode of moto
+# moto_sns = moto_fixture('sns', port=7016)
+
 moto_sqs = moto_fixture('sqs', port=7017)
 moto_sts = moto_fixture('sts', port=7018)
