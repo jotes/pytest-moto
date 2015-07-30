@@ -19,7 +19,7 @@ install:
     # manually install wheel for deployment
     - "pip install wheel"
 script:
-    - "py.test --verbose --capture=no --showlocals --cov mirakuru"
+    - "py.test --verbose --capture=no --showlocals --cov src/pytest_moto"
     - "pylama"
     # pygments library used by rst-lint doesn't work on python 3.2.
     - "if [[ $TRAVIS_PYTHON_VERSION != '3.2' ]]; then for f in *.rst; do rst-lint $f; done; fi"
