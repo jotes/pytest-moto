@@ -1,22 +1,22 @@
-# Copyright (C) 2015 by Clearcode <http://clearcode.cc>
+# Copyright (C) 2015 by seq(inf+) <http://seq.pl>
 # and associates (see AUTHORS).
 
-# This file is part of matchbox.
+# This file is part of pytest-moto.
 
-# matchbox is free software: you can redistribute it and/or modify
+# pytest-moto is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Lesser General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 
-# matchbox is distributed in the hope that it will be useful,
+# pytest-moto is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU Lesser General Public License for more details.
 
 # You should have received a copy of the GNU Lesser General Public License
-# along with matchbox.  If not, see <http://www.gnu.org/licenses/>.
+# along with pytest-moto.  If not, see <http://www.gnu.org/licenses/>.
 #
-# matchbox documentation build configuration file, created by
+# pytest-moto documentation build configuration file, created by
 # sphinx-quickstart on Thu Nov  8 20:47:06 2012.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -59,9 +59,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'matchbox'
+project = u'pytest-moto'
 basename = ''.join(project.split('.'))
-author = u'Clearcode.cc'
+author = u'seq(inf+)'
 copyright = u'2015, ' + author
 
 # The version info for the project you're documenting, acts as replacement for
@@ -70,7 +70,7 @@ copyright = u'2015, ' + author
 #
 # The short X.Y version.
 
-from matchbox import __version__
+from pytest-moto import __version__
 
 # The full version, including alpha/beta/rc tags.
 release = __version__

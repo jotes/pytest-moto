@@ -2,26 +2,31 @@ language: python
 os:
   - linux
 python:
-  - "2.7"
-  - "3.3"
-  - "3.4"
-  - "pypy"
-  - "pypy3"
+  - '2.7'
+  - '3.3'
+  - '3.4'
+  - pypy
+  - pypy3
 install:
-    - "python setup.py develop"
-    - "pip install pytest-moto[tests]"
-    - "pip install coveralls"
-    # rst files verifier, and pygments to parse code-blocks
-    - "pip install restructuredtext_lint pygments"
-    # code coverage tool
-    - "pip install coveralls"
-    # manually install wheel for deployment
-    - "pip install wheel"
+  - python setup.py develop
+  - pip install pytest-moto[tests]
+  - pip install coveralls
+  - pip install restructuredtext_lint pygments
+  - pip install coveralls
+  - pip install wheel
 script:
-    - "py.test --verbose --capture=no --showlocals --cov src/pytest_moto"
-    - "pylama"
-    # pygments library used by rst-lint doesn't work on python 3.2.
-    - "if [[ $TRAVIS_PYTHON_VERSION != '3.2' ]]; then for f in *.rst; do rst-lint $f; done; fi"
+  - py.test --verbose --capture=no --showlocals --cov src/pytest_moto
+  - pylama
+  - if [[ $TRAVIS_PYTHON_VERSION != '3.2' ]]; then for f in *.rst; do rst-lint $f; done;
+    fi
 after_success:
-    - coveralls
+  - coveralls
+
 sudo: false
+deploy:
+  provider: pypi
+  user: jot
+  password:
+    secure: Muu1aWZC1FuY4gg/rxccd8Dw5jUiEWQmGfhUQtonKCfqSUwni/uBt7BboVqJppk6mKSCpKzSPmY8I2H1JQFQwsEUfgeIk3QfQmIOD7FI9VHkrUK3Q98omsE/N+O2LE1ipGlT+H82d4EBYj7IvzbxtlJz3+BdzlAMXsoF2Da6384z/JHW+rxuU5fUkuysn/l/r0JV3FXJ1vk6/U/fSgKbtY5uVrGWROzmIa4sK7tZg+xL46Pw47oZCBoMgb62DH4vxCMUacVqOViNO4faIDz75n0YySHbwJV74DuVdStUZtKqaY+rLPQ8ZaiPBZlLJoRHHw4iBOCXgGAnLY9B1ve0Tf2Jc1aOq3eHcQP4RKxKl1PFoItISxzIjBt/vHrRYWsi12I6SMJd8NgTFQUDHW2p/J2PXMmbvqT6J4JmnCKldyWD1KG0f5U6A8EkjHJmW9oNM/XyYSCPAa8EHvW6TpmCQvfQkFXRj2ujAIbyrkV8iH1z3WbYcShb713znJIHTfeozbcJ/pSeMpkq9ezT9pVDiPnFsAyLZJ1EuxrVNx8qj58PVhGwyjPxmbNFODmimT3pYxMex3XmASyzhYZSJaD8jgzNCn+Puk8AKFw1H2GrsecNjcVDCLmaF/0uA+vcYU5bKqy6M7gmcg9Y7W76/NQU91vsKZ1Nk2hTPKIr9J5bICg=
+  on:
+    tags: true

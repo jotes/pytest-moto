@@ -45,7 +45,7 @@ def get_connection(service, connection_params):
     return getattr(importlib.import_module(module), klass)(**connection_params)
 
 
-def moto_fixture(service, host='127.0.0.1', port=7000, timeout=10,
+def moto_fixture(service, host='127.0.0.1', port=7000, timeout=30,
                  connection_params=None):
     """Create moto-based fixture which runs selected mock of AWS service.
 
@@ -66,7 +66,7 @@ def moto_fixture(service, host='127.0.0.1', port=7000, timeout=10,
     def moto_service():
         executor = TCPExecutor(
             ('moto_server', '-H', host, '-p', str(port), service),
-            host=host, port=port, timeout=10)
+            host=host, port=port, timeout=timeout)
         connection_params.setdefault('proxy', host)
         connection_params.setdefault('proxy_port', port)
         connection_params.setdefault('aws_access_key_id', '')
@@ -74,6 +74,8 @@ def moto_fixture(service, host='127.0.0.1', port=7000, timeout=10,
         connection_params.setdefault('is_secure', False)
         with executor:
             yield get_connection(service, connection_params)
+    moto_service.__doc__ = """Fixture which runs standalone moto server for {service} service on port {port}."""
+    moto_service.__doc__ = moto_service.__doc__.format(service=service, port=port)
     return moto_service
 
 

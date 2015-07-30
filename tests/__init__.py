@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-"""matchbox's tests."""
+"""pytest-moto's tests."""

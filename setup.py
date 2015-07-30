@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2015 by Clearcode <http://clearcode.cc>
+# Copyright (C) 2015 by seq(inf+) <http://seq.pl>
 # and associates (see AUTHORS).
 
 # This file is part of pytest-moto.
@@ -66,8 +66,8 @@ setup(
     ),
     keywords='pytest aws moto boto',
     author='Jaroslaw Smiejczak',
-    author_email='j.smiejczak@clearcode.cc',
-    url='https://github.com/ClearcodeHQ/pytest-moto',
+    author_email='jot@smiejczak.net',
+    url='https://github.com/jotes/pytest-moto',
     license="MIT License",
     classifiers=[
         'Development Status :: 1 - Planning',

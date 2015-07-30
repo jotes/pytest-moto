@@ -12,7 +12,7 @@ Contents
 License
 -------
 
-Copyright (c) 2015 by matchbox authors and contributors. See :ref:`authors`
+Copyright (c) 2015 by pytest-moto authors and contributors. See :ref:`authors`
 
-This module is part of matchbox and is released under
+This module is part of pytest-moto and is released under
 the MIT License (MIT): http://opensource.org/licenses/MIT
