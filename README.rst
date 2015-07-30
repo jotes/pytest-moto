@@ -47,7 +47,8 @@ Pytest-moto is collection of fixtures which are running standalone moto server w
 used by larger integration tests.
 All available fixtures:
 
-* moto_autoscaling - runs moto server with oto_cloudwatch - runs moto server with `autoscaling` api endpoint on port 7002
+* moto_autoscaling - runs moto server with `autoscaling` api endpoint on port 7002 
+* moto_cloudwatch - runs moto server with `cloudwatch` api endpoint on port 7002
 * moto_dynamodb - runs moto server with `dynamodb` api endpoint on port 7003
 * moto_ec2 - runs moto server with `ec2` api endpoint on port 7004
 * moto_elb - runs moto server with `elb` api endpoint on port 7005
