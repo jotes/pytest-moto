@@ -1,5 +1,5 @@
 pytest-moto
-========
+===========
 
 .. image:: https://pypip.in/v/pytest-moto/badge.png
     :target: https://pypi.python.org/pypi/pytest-moto/
