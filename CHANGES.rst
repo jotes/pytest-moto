@@ -1,7 +1,7 @@
 CHANGELOG
 =========
 
-unreleased
+0.1.1
 ----------
 
 - enabled pushing to pypi via tags in travis.
