@@ -16,8 +16,6 @@ def test_moto_autoscaling(moto_autoscaling):
     assert moto_autoscaling.get_all_launch_configurations() == []
 
 
-@pytest.mark.skipif(True, reason="Cloudformation isn't supported via"
-                                 "standalone moto.")
 def test_moto_cloudformation(moto_cloudformation):
     """Check if moto_cloudformation fixture returns working connection."""
     assert moto_cloudformation.list_stacks() == []
@@ -53,10 +51,9 @@ def test_moto_glacier(moto_glacier):
     assert moto_glacier.list_vaults()['VaultList'] == []
 
 
-@pytest.mark.skipif(True, reason="IAM isn't supported via standalone moto.")
 def test_moto_iam(moto_iam):
     """Check if moto_iam fixture returns working connection."""
-    assert moto_iam.get_all_users() == []
+    assert moto_iam.get_all_groups()['list_groups_response']['list_groups_result']['groups'] == []
 
 
 def test_moto_kinesis(moto_kinesis):
@@ -95,10 +92,9 @@ def test_moto_ses(moto_ses):
     assert moto_ses.get_send_quota()["GetSendQuotaResponse"]["GetSendQuotaResult"]["SentLast24Hours"] == "0"
 
 
-@pytest.mark.skipif(True, reason="SNS isn't supported via standalone moto.")
 def test_moto_sns(moto_sns):
     """Check if moto_ses fixture returns working connection."""
-    assert moto_sns.get_all_topics() == []
+    assert moto_sns.get_all_topics()['ListTopicsResponse']['ListTopicsResult']['Topics'] == []
 
 
 def test_moto_sqs(moto_sqs):

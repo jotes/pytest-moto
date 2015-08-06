@@ -40,7 +40,7 @@ def read(fname):
 requirements = [
     'mirakuru==0.5.0',
     'boto==2.38.0',
-    'moto==0.4.7'
+    'moto==0.4.10'
 ]
 
 test_requires = [

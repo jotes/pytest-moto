@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+unreleased
+----------
+
+- Enabled disabled tests for cloudformation, iam and sns because of new version of moto library (0.4.10).
+
 0.0.1
 ----------
 
