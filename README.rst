@@ -5,8 +5,8 @@ pytest-moto
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: Latest PyPI version
 
-.. image:: https://readthedocs.org/projects/pytest-moto/badge/?version=v0.0.1
-    :target: https://readthedocs.org/projects/pytest-moto/?badge=v0.0.1
+.. image:: https://readthedocs.org/projects/pytest-moto/badge/?version=v0.1.0
+    :target: https://readthedocs.org/projects/pytest-moto/?badge=v0.1.0
     :alt: Documentation Status
 
 .. image:: https://pypip.in/d/pytest-moto/badge.png
@@ -28,16 +28,16 @@ pytest-moto
 Package status
 --------------
 
-.. image:: https://travis-ci.org/jotes/pytest-moto.svg?branch=v0.0.1
+.. image:: https://travis-ci.org/jotes/pytest-moto.svg?branch=v0.1.0
     :target: https://travis-ci.org/jotes/pytest-moto
     :alt: Tests
 
-.. image:: https://coveralls.io/repos/jotes/pytest-moto/badge.png?branch=v0.0.1
-    :target: https://coveralls.io/r/jotes/pytest-moto?branch=v0.0.1
+.. image:: https://coveralls.io/repos/jotes/pytest-moto/badge.png?branch=v0.1.0
+    :target: https://coveralls.io/r/jotes/pytest-moto?branch=v0.1.0
     :alt: Coverage Status
 
-.. image:: https://requires.io/github/jotes/pytest-moto/requirements.svg?tag=v0.0.1
-     :target: https://requires.io/github/jotes/pytest-moto/requirements/?tag=v0.0.1
+.. image:: https://requires.io/github/jotes/pytest-moto/requirements.svg?tag=v0.1.0
+     :target: https://requires.io/github/jotes/pytest-moto/requirements/?tag=v0.1.0
      :alt: Requirements Status
 
 
