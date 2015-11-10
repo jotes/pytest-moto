@@ -32,8 +32,6 @@ CONNECTION_MAP = {
 class UnsupportedService(Exception):
     """Exception is raised if user called unsupported service."""
 
-    pass
-
 
 def get_connection(service, connection_params):
     """Function returns connection for given service."""
