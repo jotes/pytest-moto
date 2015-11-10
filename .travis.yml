@@ -13,6 +13,7 @@ install:
   - pip install coveralls
   - pip install restructuredtext_lint pygments
   - pip install coveralls
+  - pip install codecov
   - pip install wheel
 script:
   - py.test --verbose --capture=no --showlocals --cov src/pytest_moto
@@ -21,7 +22,7 @@ script:
     fi
 after_success:
   - coveralls
-
+  - codecov
 sudo: false
 deploy:
   provider: pypi
