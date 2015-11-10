@@ -30,7 +30,6 @@ CONNECTION_MAP = {
 
 
 class UnsupportedService(Exception):
-
     """Exception is raised if user called unsupported service."""
 
     pass
