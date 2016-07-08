@@ -5,10 +5,6 @@ pytest-moto
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: Latest PyPI version
 
-.. image:: https://readthedocs.org/projects/pytest-moto/badge/?version=v0.2.0
-    :target: https://readthedocs.org/projects/pytest-moto/?badge=v0.2.0
-    :alt: Documentation Status
-
 .. image:: https://pypip.in/d/pytest-moto/badge.png
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: Number of PyPI downloads
