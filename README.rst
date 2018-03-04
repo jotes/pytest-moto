@@ -1,15 +1,15 @@
 pytest-moto
 ===========
 
-.. image:: https://pypip.in/v/pytest-moto/badge.png
+.. image:: https://img.shields.io/pypi/v/pytest-moto.svg
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: Latest PyPI version
 
-.. image:: https://pypip.in/d/pytest-moto/badge.png
+.. image:: https://img.shields.io/pypi/dm/pytest-moto.svg
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: Number of PyPI downloads
 
-.. image:: https://pypip.in/wheel/pytest-moto/badge.png
+.. image:: https://img.shields.io/pypi/wheel/pytest-moto.svg
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: Wheel Status
 
@@ -17,7 +17,7 @@ pytest-moto
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: Egg Status
 
-.. image:: https://pypip.in/license/pytest-moto/badge.png
+.. image:: https://img.shields.io/pypi/l/pytest-moto.svg
     :target: https://pypi.python.org/pypi/pytest-moto/
     :alt: License
 
